@@ -18,6 +18,7 @@
 	<table>
 		<tr>
 			<td>Add your greeting:</td>
+			<td>Add your greeting:</td>
                         <td><form:input path="greeting.greetingText" size="100"/></td>
 		</tr>
 		<tr>
