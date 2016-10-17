@@ -1,0 +1,534 @@
+2016-10-07 13:51:06.0988 INFO localhost-startStop-2 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 13:51:07.0068 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 13:51:07 ICT 2016]; root of context hierarchy
+2016-10-07 13:51:07.0175 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 13:51:07.0298 INFO localhost-startStop-2 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 13:51:07.0404 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 13:51:07.0658 INFO localhost-startStop-2 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7963cfeb: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 13:51:07.0909 INFO localhost-startStop-2 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 13:51:07.0978 INFO localhost-startStop-2 org.hibernate.cfg.Environment – Hibernate 3.3.2.GA
+2016-10-07 13:51:07.0978 INFO localhost-startStop-2 org.hibernate.cfg.Environment – hibernate.properties not found
+2016-10-07 13:51:07.0978 INFO localhost-startStop-2 org.hibernate.cfg.Environment – Bytecode provider name : javassist
+2016-10-07 13:51:07.0993 INFO localhost-startStop-2 org.hibernate.cfg.Environment – using JDK 1.4 java.sql.Timestamp handling
+2016-10-07 13:51:08.0078 INFO localhost-startStop-2 org.springframework.orm.hibernate3.LocalSessionFactoryBean – Building new Hibernate SessionFactory
+2016-10-07 13:51:08.0078 INFO localhost-startStop-2 org.hibernate.connection.ConnectionProviderFactory – Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-10-07 13:51:08.0363 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – RDBMS: MySQL, version: 5.5.5-10.0.17-MariaDB
+2016-10-07 13:51:08.0363 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.27 ( Revision: alexander.soklakov@oracle.com-20131021093118-gtm1bh1vb450xipt )
+2016-10-07 13:51:08.0410 INFO localhost-startStop-2 org.hibernate.dialect.Dialect – Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.transaction.TransactionFactoryFactory – Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.transaction.TransactionManagerLookupFactory – No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Automatic flush during beforeCompletion(): disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Automatic session close at end of transaction: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – JDBC batch size: 15
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – JDBC batch updates for versioned data: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Scrollable result sets: enabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – JDBC3 getGeneratedKeys(): enabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Connection release mode: auto
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Maximum outer join fetch depth: 2
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Default batch fetch size: 1
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Generate SQL with comments: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Order SQL updates by primary key: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Order SQL inserts for batching: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.hql.ast.ASTQueryTranslatorFactory – Using ASTQueryTranslatorFactory
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Query language substitutions: {}
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – JPA-QL strict compliance: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Second-level cache: enabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Query cache: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Optimize cache for minimal puts: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Structured second-level cache entries: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Echoing all SQL to stdout
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Statistics: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Deleted entity synthetic identifier rollback: disabled
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Default entity-mode: pojo
+2016-10-07 13:51:08.0463 INFO localhost-startStop-2 org.hibernate.cfg.SettingsFactory – Named query checking : enabled
+2016-10-07 13:51:08.0510 INFO localhost-startStop-2 org.hibernate.impl.SessionFactoryImpl – building session factory
+2016-10-07 13:51:08.0510 INFO localhost-startStop-2 org.hibernate.impl.SessionFactoryObjectFactory – Not binding factory to JNDI, no JNDI name configured
+2016-10-07 13:51:08.0796 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping – Mapped URL path [/home/greetings.html] onto handler 'greetingController'
+2016-10-07 13:51:08.0796 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping – Mapped URL path [/home/addgreeting.html] onto handler 'greetingController'
+2016-10-07 13:51:08.0964 INFO localhost-startStop-2 org.springframework.orm.hibernate3.HibernateTransactionManager – Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@69b4017e] of Hibernate SessionFactory for HibernateTransactionManager
+2016-10-07 13:51:08.0965 INFO localhost-startStop-2 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization completed in 1976 ms
+2016-10-07 13:51:08.0965 INFO localhost-startStop-2 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization started
+2016-10-07 13:51:08.0980 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing WebApplicationContext for namespace 'greeter-servlet': startup date [Fri Oct 07 13:51:08 ICT 2016]; parent: Root WebApplicationContext
+2016-10-07 13:51:08.0980 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/greeter-servlet.xml]
+2016-10-07 13:51:09.0012 INFO localhost-startStop-2 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@213440c9: defining beans [viewResolver]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7963cfeb
+2016-10-07 13:51:09.0043 INFO localhost-startStop-2 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization completed in 78 ms
+2016-10-07 13:51:13.0633 INFO http-bio-8080-exec-5 GreetingController – entering showAddGreetingPage()
+2016-10-07 13:51:22.0476 INFO http-bio-8080-exec-10 GreetingController – entering addGreetingAndShowAll()
+2016-10-07 13:52:35.0414 INFO http-bio-8080-exec-1 GreetingController – entering addGreetingAndShowAll()
+2016-10-07 13:56:00.0378 INFO http-bio-8080-exec-4 GreetingController – entering addGreetingAndShowAll()
+2016-10-07 13:58:54.0127 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 13:58:54.0201 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 13:58:54 ICT 2016]; root of context hierarchy
+2016-10-07 13:58:54.0296 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 13:58:54.0537 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 13:58:54.0711 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 13:58:55.0057 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3730cd9f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 13:58:55.0188 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 13:58:55.0289 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3730cd9f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 13:58:55.0325 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:502)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1024)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:900)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1358)
+	... 39 more
+2016-10-07 13:59:41.0599 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 13:59:41.0652 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 13:59:41 ICT 2016]; root of context hierarchy
+2016-10-07 13:59:41.0729 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 13:59:41.0940 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 13:59:42.0094 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 13:59:42.0454 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4216669f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 13:59:42.0540 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 13:59:42.0589 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4216669f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 13:59:42.0609 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:502)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'annotatedClasses' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'annotatedClasses' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1024)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:900)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1358)
+	... 39 more
+2016-10-07 14:06:12.0183 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:06:12.0247 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:06:12 ICT 2016]; root of context hierarchy
+2016-10-07 14:06:12.0343 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:06:12.0580 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:06:12.0748 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:06:13.0107 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@55aef9ec: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 14:06:13.0183 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:06:13.0225 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@55aef9ec: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 14:06:13.0244 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:502)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1024)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:900)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1358)
+	... 39 more
+2016-10-07 14:07:31.0348 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:07:31.0537 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:07:31 ICT 2016]; root of context hierarchy
+2016-10-07 14:07:31.0744 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:07:32.0145 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:07:32.0396 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:07:33.0064 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a5619f7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 14:07:33.0195 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:07:33.0274 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a5619f7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager]; root of factory hierarchy
+2016-10-07 14:07:33.0316 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:502)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1024)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:900)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1358)
+	... 39 more
+2016-10-07 14:17:09.0409 INFO localhost-startStop-2 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:17:09.0573 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:17:09 ICT 2016]; root of context hierarchy
+2016-10-07 14:17:09.0728 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:17:09.0884 INFO localhost-startStop-2 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:17:10.0082 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:17:10.0449 INFO localhost-startStop-2 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2d6561f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:17:10.0584 INFO localhost-startStop-2 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:17:10.0615 INFO localhost-startStop-2 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2d6561f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:17:10.0647 ERROR localhost-startStop-2 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1064)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:924)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393)
+	... 39 more
+2016-10-07 14:18:04.0024 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:18:04.0171 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:18:04 ICT 2016]; root of context hierarchy
+2016-10-07 14:18:04.0271 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:18:04.0506 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:18:04.0676 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:18:05.0001 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6e60de7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:18:05.0123 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:18:05.0174 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6e60de7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:18:05.0194 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 28 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'packagesToScan' of bean class [org.springframework.orm.hibernate3.LocalSessionFactoryBean]: Bean property 'packagesToScan' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1064)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:924)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393)
+	... 39 more
+2016-10-07 14:20:41.0485 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:20:41.0644 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:20:41 ICT 2016]; root of context hierarchy
+2016-10-07 14:20:41.0742 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:20:41.0985 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:20:42.0171 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:20:42.0529 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7deb3f0e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:20:42.0646 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:20:42.0739 INFO localhost-startStop-1 org.hibernate.cfg.annotations.Version – Hibernate Annotations 3.4.0.GA
+2016-10-07 14:20:42.0751 INFO localhost-startStop-1 org.hibernate.cfg.Environment – Hibernate 3.3.2.GA
+2016-10-07 14:20:42.0753 INFO localhost-startStop-1 org.hibernate.cfg.Environment – hibernate.properties not found
+2016-10-07 14:20:42.0757 INFO localhost-startStop-1 org.hibernate.cfg.Environment – Bytecode provider name : javassist
+2016-10-07 14:20:42.0761 INFO localhost-startStop-1 org.hibernate.cfg.Environment – using JDK 1.4 java.sql.Timestamp handling
+2016-10-07 14:20:42.0860 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – Hibernate Commons Annotations 3.1.0.GA
+2016-10-07 14:20:43.0096 INFO localhost-startStop-1 org.hibernate.cfg.AnnotationBinder – Binding entity from annotated class: com.bitbybit.domain.Greeting
+2016-10-07 14:20:43.0148 INFO localhost-startStop-1 org.hibernate.cfg.annotations.EntityBinder – Bind entity com.bitbybit.domain.Greeting on table greeting
+2016-10-07 14:20:43.0216 INFO localhost-startStop-1 org.hibernate.cfg.AnnotationConfiguration – Hibernate Validator not found: ignoring
+2016-10-07 14:20:43.0216 INFO localhost-startStop-1 org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean – Building new Hibernate SessionFactory
+2016-10-07 14:20:43.0221 INFO localhost-startStop-1 org.hibernate.cfg.search.HibernateSearchEventListenerRegister – Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-10-07 14:20:43.0301 INFO localhost-startStop-1 org.hibernate.connection.ConnectionProviderFactory – Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-10-07 14:20:43.0739 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – RDBMS: MySQL, version: 5.5.5-10.0.17-MariaDB
+2016-10-07 14:20:43.0739 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.27 ( Revision: alexander.soklakov@oracle.com-20131021093118-gtm1bh1vb450xipt )
+2016-10-07 14:20:43.0795 INFO localhost-startStop-1 org.hibernate.dialect.Dialect – Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-07 14:20:43.0841 INFO localhost-startStop-1 org.hibernate.transaction.TransactionFactoryFactory – Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-10-07 14:20:43.0844 INFO localhost-startStop-1 org.hibernate.transaction.TransactionManagerLookupFactory – No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-10-07 14:20:43.0845 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Automatic flush during beforeCompletion(): disabled
+2016-10-07 14:20:43.0845 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Automatic session close at end of transaction: disabled
+2016-10-07 14:20:43.0845 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC batch size: 15
+2016-10-07 14:20:43.0845 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC batch updates for versioned data: disabled
+2016-10-07 14:20:43.0846 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Scrollable result sets: enabled
+2016-10-07 14:20:43.0846 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC3 getGeneratedKeys(): enabled
+2016-10-07 14:20:43.0846 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Connection release mode: auto
+2016-10-07 14:20:43.0847 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Maximum outer join fetch depth: 2
+2016-10-07 14:20:43.0847 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Default batch fetch size: 1
+2016-10-07 14:20:43.0847 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Generate SQL with comments: disabled
+2016-10-07 14:20:43.0847 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Order SQL updates by primary key: disabled
+2016-10-07 14:20:43.0847 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Order SQL inserts for batching: disabled
+2016-10-07 14:20:43.0848 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-10-07 14:20:43.0851 INFO localhost-startStop-1 org.hibernate.hql.ast.ASTQueryTranslatorFactory – Using ASTQueryTranslatorFactory
+2016-10-07 14:20:43.0851 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Query language substitutions: {}
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JPA-QL strict compliance: disabled
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Second-level cache: enabled
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Query cache: disabled
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Optimize cache for minimal puts: disabled
+2016-10-07 14:20:43.0852 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Structured second-level cache entries: disabled
+2016-10-07 14:20:43.0860 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Echoing all SQL to stdout
+2016-10-07 14:20:43.0862 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Statistics: disabled
+2016-10-07 14:20:43.0862 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Deleted entity synthetic identifier rollback: disabled
+2016-10-07 14:20:43.0862 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Default entity-mode: pojo
+2016-10-07 14:20:43.0862 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Named query checking : enabled
+2016-10-07 14:20:43.0930 INFO localhost-startStop-1 org.hibernate.impl.SessionFactoryImpl – building session factory
+2016-10-07 14:20:44.0241 INFO localhost-startStop-1 org.hibernate.impl.SessionFactoryObjectFactory – Not binding factory to JNDI, no JNDI name configured
+2016-10-07 14:20:44.0670 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAllGreetings(java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-07 14:20:44.0671 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.addGreetingAndShowAll(com.bitbybit.web.form.GreetingForm,java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-07 14:20:44.0671 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/addgreeting.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAddGreetingPage(com.bitbybit.web.form.GreetingForm)
+2016-10-07 14:20:45.0074 INFO localhost-startStop-1 org.springframework.orm.hibernate3.HibernateTransactionManager – Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@22fb9611] of Hibernate SessionFactory for HibernateTransactionManager
+2016-10-07 14:20:45.0080 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization completed in 3595 ms
+2016-10-07 14:20:45.0172 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization started
+2016-10-07 14:20:45.0178 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing WebApplicationContext for namespace 'greeter-servlet': startup date [Fri Oct 07 14:20:45 ICT 2016]; parent: Root WebApplicationContext
+2016-10-07 14:20:45.0181 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/greeter-servlet.xml]
+2016-10-07 14:20:45.0225 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@252ae494: defining beans [viewResolver]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7deb3f0e
+2016-10-07 14:20:45.0265 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization completed in 93 ms
+2016-10-07 14:21:02.0125 INFO http-bio-8080-exec-1 GreetingController – entering showAddGreetingPage()
+2016-10-07 14:22:38.0730 INFO http-bio-8080-exec-2 GreetingController – entering showAddGreetingPage()
+2016-10-07 14:22:59.0405 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-07 14:22:59.0543 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Fri Oct 07 14:22:59 ICT 2016]; root of context hierarchy
+2016-10-07 14:22:59.0644 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-07 14:22:59.0864 INFO localhost-startStop-1 org.springframework.context.annotation.ClassPathBeanDefinitionScanner – JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-10-07 14:23:00.0043 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-07 14:23:00.0480 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5fa3efd5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,greetingDao,greetingService,greetingController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,myDataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2016-10-07 14:23:00.0626 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-07 14:23:00.0736 INFO localhost-startStop-1 org.hibernate.cfg.annotations.Version – Hibernate Annotations 3.4.0.GA
+2016-10-07 14:23:00.0757 INFO localhost-startStop-1 org.hibernate.cfg.Environment – Hibernate 3.3.2.GA
+2016-10-07 14:23:00.0760 INFO localhost-startStop-1 org.hibernate.cfg.Environment – hibernate.properties not found
+2016-10-07 14:23:00.0766 INFO localhost-startStop-1 org.hibernate.cfg.Environment – Bytecode provider name : javassist
+2016-10-07 14:23:00.0773 INFO localhost-startStop-1 org.hibernate.cfg.Environment – using JDK 1.4 java.sql.Timestamp handling
+2016-10-07 14:23:00.0932 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – Hibernate Commons Annotations 3.1.0.GA
+2016-10-07 14:23:01.0194 INFO localhost-startStop-1 org.hibernate.cfg.AnnotationBinder – Binding entity from annotated class: com.bitbybit.domain.Greeting
+2016-10-07 14:23:01.0257 INFO localhost-startStop-1 org.hibernate.cfg.annotations.EntityBinder – Bind entity com.bitbybit.domain.Greeting on table greeting
+2016-10-07 14:23:01.0356 INFO localhost-startStop-1 org.hibernate.cfg.AnnotationConfiguration – Hibernate Validator not found: ignoring
+2016-10-07 14:23:01.0356 INFO localhost-startStop-1 org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean – Building new Hibernate SessionFactory
+2016-10-07 14:23:01.0361 INFO localhost-startStop-1 org.hibernate.cfg.search.HibernateSearchEventListenerRegister – Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-10-07 14:23:01.0457 INFO localhost-startStop-1 org.hibernate.connection.ConnectionProviderFactory – Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2016-10-07 14:23:01.0916 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – RDBMS: MySQL, version: 5.5.5-10.0.17-MariaDB
+2016-10-07 14:23:01.0916 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.27 ( Revision: alexander.soklakov@oracle.com-20131021093118-gtm1bh1vb450xipt )
+2016-10-07 14:23:01.0975 INFO localhost-startStop-1 org.hibernate.dialect.Dialect – Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-07 14:23:01.0985 INFO localhost-startStop-1 org.hibernate.transaction.TransactionFactoryFactory – Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2016-10-07 14:23:01.0987 INFO localhost-startStop-1 org.hibernate.transaction.TransactionManagerLookupFactory – No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-10-07 14:23:01.0987 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Automatic flush during beforeCompletion(): disabled
+2016-10-07 14:23:01.0988 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Automatic session close at end of transaction: disabled
+2016-10-07 14:23:01.0988 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC batch size: 15
+2016-10-07 14:23:01.0988 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC batch updates for versioned data: disabled
+2016-10-07 14:23:01.0989 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Scrollable result sets: enabled
+2016-10-07 14:23:01.0989 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – JDBC3 getGeneratedKeys(): enabled
+2016-10-07 14:23:01.0989 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Connection release mode: auto
+2016-10-07 14:23:01.0991 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Maximum outer join fetch depth: 2
+2016-10-07 14:23:01.0991 INFO localhost-startStop-1 org.hibernate.cfg.SettingsFactory – Default batch fetch size: 1

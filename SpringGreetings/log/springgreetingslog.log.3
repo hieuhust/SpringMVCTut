@@ -1,0 +1,672 @@
+2016-10-10 18:45:21.0328 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-10 18:45:21.0583 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Mon Oct 10 18:45:21 ICT 2016]; root of context hierarchy
+2016-10-10 18:45:21.0724 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-10 18:45:22.0414 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-10 18:45:22.0485 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService' with a different definition: replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-10 18:45:22.0827 INFO localhost-startStop-1 org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor – JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-10-10 18:45:23.0157 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-10 18:45:23.0574 INFO localhost-startStop-1 org.hibernate.Version – HHH000412: Hibernate Core {5.2.3.Final}
+2016-10-10 18:45:23.0578 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-10 18:45:23.0581 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-10 18:45:23.0749 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – Hibernate Commons Annotations 3.2.0.Final
+2016-10-10 18:45:23.0761 WARN localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 28 more
+Caused by: java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.generateDefaultReflectionManager(MetadataBuilderImpl.java:742)
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:715)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:127)
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:135)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:654)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:726)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 38 more
+2016-10-10 18:45:23.0794 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 28 more
+Caused by: java.lang.NoSuchMethodError: org.hibernate.cfg.annotations.reflection.JPAMetadataProvider.<init>(Lorg/hibernate/boot/spi/MetadataBuildingOptions;)V
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.generateDefaultReflectionManager(MetadataBuilderImpl.java:742)
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:715)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:127)
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:135)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:654)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:726)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 38 more
+2016-10-11 09:19:17.0388 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 09:19:17.0646 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 09:19:17 ICT 2016]; root of context hierarchy
+2016-10-11 09:19:17.0732 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 09:19:18.0373 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 09:19:18.0442 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 09:19:18.0869 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-11 09:19:19.0328 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – Hibernate Commons Annotations 3.2.0.Final
+2016-10-11 09:19:19.0342 INFO localhost-startStop-1 org.hibernate.Version – HHH000412: Hibernate Core {4.3.6.Final}
+2016-10-11 09:19:19.0348 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-11 09:19:19.0351 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-11 09:19:19.0407 WARN localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2957)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.hibernate.cfg.Configuration.reset(Configuration.java:353)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:289)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:293)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.<init>(LocalSessionFactoryBuilder.java:140)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: org.hibernate.util.DTDEntityResolver
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 52 more
+2016-10-11 09:19:19.0438 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2957)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.hibernate.cfg.Configuration.reset(Configuration.java:353)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:289)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:293)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.<init>(LocalSessionFactoryBuilder.java:140)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: org.hibernate.util.DTDEntityResolver
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 52 more
+2016-10-11 09:34:42.0580 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 09:34:42.0763 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 09:34:42 ICT 2016]; root of context hierarchy
+2016-10-11 09:34:42.0850 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 09:34:43.0267 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 09:34:43.0338 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 09:34:43.0823 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-11 09:34:44.0204 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – Hibernate Commons Annotations 3.2.0.Final
+2016-10-11 09:34:44.0212 INFO localhost-startStop-1 org.hibernate.Version – HHH000412: Hibernate Core {4.3.6.Final}
+2016-10-11 09:34:44.0215 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-11 09:34:44.0218 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-11 09:34:44.0257 WARN localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2957)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.hibernate.cfg.Configuration.reset(Configuration.java:353)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:289)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:293)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.<init>(LocalSessionFactoryBuilder.java:140)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: org.hibernate.util.DTDEntityResolver
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 52 more
+2016-10-11 09:34:44.0287 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.NoClassDefFoundError: org/hibernate/util/DTDEntityResolver
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2957)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.hibernate.cfg.Configuration.reset(Configuration.java:353)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:289)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:293)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.<init>(LocalSessionFactoryBuilder.java:140)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: org.hibernate.util.DTDEntityResolver
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 52 more
+2016-10-11 09:39:40.0464 INFO localhost-startStop-2 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 09:39:40.0621 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 09:39:40 ICT 2016]; root of context hierarchy
+2016-10-11 09:39:40.0667 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 09:39:40.0947 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 09:39:41.0004 INFO localhost-startStop-2 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 09:39:41.0336 INFO localhost-startStop-2 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-11 09:39:41.0537 INFO localhost-startStop-2 org.hibernate.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-10-11 09:39:41.0546 INFO localhost-startStop-2 org.hibernate.Version – HHH000412: Hibernate Core {4.3.6.Final}
+2016-10-11 09:39:41.0547 INFO localhost-startStop-2 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-11 09:39:41.0547 INFO localhost-startStop-2 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-11 09:39:43.0975 WARN localhost-startStop-2 org.hibernate.engine.jdbc.internal.JdbcServicesImpl – HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 09:39:43.0997 INFO localhost-startStop-2 org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-11 09:39:44.0011 INFO localhost-startStop-2 org.hibernate.engine.jdbc.internal.LobCreatorBuilder – HHH000422: Disabling contextual LOB creation as connection was null
+2016-10-11 09:39:44.0269 INFO localhost-startStop-2 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator – HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-11 09:39:44.0277 INFO localhost-startStop-2 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory – HHH000397: Using ASTQueryTranslatorFactory
+2016-10-11 09:39:45.0109 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAllGreetings(java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 09:39:45.0109 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.addGreetingAndShowAll(com.bitbybit.web.form.GreetingForm,java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 09:39:45.0109 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/addgreeting.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAddGreetingPage(com.bitbybit.web.form.GreetingForm)
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.bitbybit.web.controller.RestfulController.createUser(com.bitbybit.domain.User,org.springframework.web.util.UriComponentsBuilder)
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.updateUser(long,com.bitbybit.domain.User)
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteUser(long)
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bitbybit.domain.User>> com.bitbybit.web.controller.RestfulController.getListAllUser()
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteAllUser()
+2016-10-11 09:39:45.0111 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.getUser(long)
+2016-10-11 09:39:46.0010 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 09:39:40 ICT 2016]; root of context hierarchy
+2016-10-11 09:39:46.0076 INFO localhost-startStop-2 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 09:39:40 ICT 2016]; root of context hierarchy
+2016-10-11 09:39:46.0165 INFO localhost-startStop-2 org.springframework.orm.hibernate4.HibernateTransactionManager – Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@71fdcdb4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-10-11 09:39:46.0173 INFO localhost-startStop-2 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization completed in 5708 ms
+2016-10-11 09:39:46.0185 INFO localhost-startStop-2 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization started
+2016-10-11 09:39:46.0188 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 09:39:46 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 09:39:46.0188 INFO localhost-startStop-2 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/greeter-servlet.xml]
+2016-10-11 09:39:46.0241 INFO localhost-startStop-2 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization completed in 56 ms
+2016-10-11 09:39:46.0248 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Closing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 09:39:46 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 09:39:46.0248 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Closing Root WebApplicationContext: startup date [Tue Oct 11 09:39:40 ICT 2016]; root of context hierarchy
+2016-10-11 09:39:54.0649 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 09:39:54.0829 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 09:39:54 ICT 2016]; root of context hierarchy
+2016-10-11 09:39:54.0910 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 09:39:55.0347 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 09:39:55.0413 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 09:39:55.0847 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-11 09:39:56.0253 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-10-11 09:39:56.0268 INFO localhost-startStop-1 org.hibernate.Version – HHH000412: Hibernate Core {4.3.6.Final}
+2016-10-11 09:39:56.0273 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-11 09:39:56.0276 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-11 09:39:58.0762 WARN localhost-startStop-1 org.hibernate.engine.jdbc.internal.JdbcServicesImpl – HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 09:39:58.0781 INFO localhost-startStop-1 org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-11 09:39:58.0800 INFO localhost-startStop-1 org.hibernate.engine.jdbc.internal.LobCreatorBuilder – HHH000422: Disabling contextual LOB creation as connection was null
+2016-10-11 09:39:59.0087 INFO localhost-startStop-1 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator – HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-11 09:39:59.0099 INFO localhost-startStop-1 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory – HHH000397: Using ASTQueryTranslatorFactory
+2016-10-11 09:40:00.0137 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAllGreetings(java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 09:40:00.0137 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.addGreetingAndShowAll(com.bitbybit.web.form.GreetingForm,java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 09:40:00.0137 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/addgreeting.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAddGreetingPage(com.bitbybit.web.form.GreetingForm)
+2016-10-11 09:40:00.0139 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.updateUser(long,com.bitbybit.domain.User)
+2016-10-11 09:40:00.0140 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.bitbybit.web.controller.RestfulController.createUser(com.bitbybit.domain.User,org.springframework.web.util.UriComponentsBuilder)
+2016-10-11 09:40:00.0140 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.getUser(long)
+2016-10-11 09:40:00.0141 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteUser(long)
+2016-10-11 09:40:00.0141 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteAllUser()
+2016-10-11 09:40:00.0141 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bitbybit.domain.User>> com.bitbybit.web.controller.RestfulController.getListAllUser()
+2016-10-11 09:40:00.0666 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 09:39:54 ICT 2016]; root of context hierarchy
+2016-10-11 09:40:00.0743 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 09:39:54 ICT 2016]; root of context hierarchy
+2016-10-11 09:40:00.0841 INFO localhost-startStop-1 org.springframework.orm.hibernate4.HibernateTransactionManager – Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3f82f30a] of Hibernate SessionFactory for HibernateTransactionManager
+2016-10-11 09:40:00.0852 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization completed in 6202 ms
+2016-10-11 09:40:00.0871 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization started
+2016-10-11 09:40:00.0876 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 09:40:00 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 09:40:00.0877 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/greeter-servlet.xml]
+2016-10-11 09:40:01.0040 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization completed in 169 ms
+2016-10-11 09:40:14.0257 INFO http-bio-8080-exec-1 GreetingController – entering showAddGreetingPage()
+2016-10-11 09:41:52.0076 WARN http-bio-8080-exec-4 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – SQL Error: 0, SQLState: 08S01
+2016-10-11 09:41:52.0076 ERROR http-bio-8080-exec-4 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 09:42:40.0695 INFO http-bio-8080-exec-5 GreetingController – entering showAddGreetingPage()
+2016-10-11 09:42:47.0299 WARN http-bio-8080-exec-6 org.springframework.web.servlet.PageNotFound – No mapping found for HTTP request with URI [/SpringGreetings/home/user] in DispatcherServlet with name 'greeter'
+2016-10-11 09:42:58.0145 INFO http-bio-8080-exec-8 GreetingController – entering addGreetingAndShowAll()
+2016-10-11 09:43:00.0158 WARN http-bio-8080-exec-8 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – SQL Error: 0, SQLState: 08S01
+2016-10-11 09:43:00.0159 ERROR http-bio-8080-exec-8 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 09:44:24.0067 INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.XmlWebApplicationContext – Closing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 09:40:00 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 09:44:24.0153 INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.XmlWebApplicationContext – Closing Root WebApplicationContext: startup date [Tue Oct 11 09:39:54 ICT 2016]; root of context hierarchy
+2016-10-11 09:45:17.0634 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 09:45:17.0852 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 09:45:17 ICT 2016]; root of context hierarchy
+2016-10-11 09:45:17.0945 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 09:45:18.0373 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 09:45:18.0442 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 09:45:18.0866 WARN localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1328)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:622)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:412)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:186)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:249)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:395)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1320)
+	... 38 more
+2016-10-11 09:45:18.0898 ERROR localhost-startStop-1 org.springframework.web.context.ContextLoader – Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'greetingDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.bitbybit.dao.GreetingDao.sessionFactory; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 26 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean] for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/datasource-context.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1328)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:622)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:412)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:186)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.annotation.AnnotationSessionFactoryBean
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:249)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:395)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1320)
+	... 38 more
+2016-10-11 10:00:53.0583 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 10:00:53.0736 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 10:00:53 ICT 2016]; root of context hierarchy
+2016-10-11 10:00:53.0817 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 10:00:54.0279 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]
+2016-10-11 10:00:54.0374 INFO localhost-startStop-1 org.springframework.beans.factory.support.DefaultListableBeanFactory – Overriding bean definition for bean 'resfulService': replacing [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\xampp\tomcat\webapps\SpringGreetings\WEB-INF\classes\com\bitbybit\service\ResfulServiceImpl.class]] with [Generic bean: class [com.bitbybit.service.ResfulServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/applicationContext.xml]]
+2016-10-11 10:00:54.0911 INFO localhost-startStop-1 org.springframework.jdbc.datasource.DriverManagerDataSource – Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-10-11 10:00:55.0264 INFO localhost-startStop-1 org.hibernate.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-10-11 10:00:55.0277 INFO localhost-startStop-1 org.hibernate.Version – HHH000412: Hibernate Core {4.3.6.Final}
+2016-10-11 10:00:55.0280 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000206: hibernate.properties not found
+2016-10-11 10:00:55.0283 INFO localhost-startStop-1 org.hibernate.cfg.Environment – HHH000021: Bytecode provider name : javassist
+2016-10-11 10:00:57.0752 WARN localhost-startStop-1 org.hibernate.engine.jdbc.internal.JdbcServicesImpl – HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 10:00:57.0773 INFO localhost-startStop-1 org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-10-11 10:00:57.0786 INFO localhost-startStop-1 org.hibernate.engine.jdbc.internal.LobCreatorBuilder – HHH000422: Disabling contextual LOB creation as connection was null
+2016-10-11 10:00:58.0005 INFO localhost-startStop-1 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator – HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-11 10:00:58.0017 INFO localhost-startStop-1 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory – HHH000397: Using ASTQueryTranslatorFactory
+2016-10-11 10:00:59.0067 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.addGreetingAndShowAll(com.bitbybit.web.form.GreetingForm,java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 10:00:59.0068 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/addgreeting.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAddGreetingPage(com.bitbybit.web.form.GreetingForm)
+2016-10-11 10:00:59.0068 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/greetings.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bitbybit.web.controller.GreetingController.showAllGreetings(java.util.Map<java.lang.String, java.lang.Object>)
+2016-10-11 10:00:59.0069 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.bitbybit.web.controller.RestfulController.createUser(com.bitbybit.domain.User,org.springframework.web.util.UriComponentsBuilder)
+2016-10-11 10:00:59.0069 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.updateUser(long,com.bitbybit.domain.User)
+2016-10-11 10:00:59.0070 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteAllUser()
+2016-10-11 10:00:59.0070 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.getUser(long)
+2016-10-11 10:00:59.0070 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<com.bitbybit.domain.User> com.bitbybit.web.controller.RestfulController.deleteUser(long)
+2016-10-11 10:00:59.0070 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping – Mapped "{[/home/user/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bitbybit.domain.User>> com.bitbybit.web.controller.RestfulController.getListAllUser()
+2016-10-11 10:00:59.0501 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 10:00:53 ICT 2016]; root of context hierarchy
+2016-10-11 10:00:59.0563 INFO localhost-startStop-1 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter – Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 11 10:00:53 ICT 2016]; root of context hierarchy
+2016-10-11 10:00:59.0742 INFO localhost-startStop-1 org.springframework.orm.hibernate4.HibernateTransactionManager – Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@4bcc4194] of Hibernate SessionFactory for HibernateTransactionManager
+2016-10-11 10:00:59.0750 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization completed in 6167 ms
+2016-10-11 10:00:59.0765 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization started
+2016-10-11 10:00:59.0768 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 10:00:59 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 10:00:59.0768 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/greeter-servlet.xml]
+2016-10-11 10:00:59.0837 INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet – FrameworkServlet 'greeter': initialization completed in 72 ms
+2016-10-11 10:01:18.0065 INFO http-bio-8080-exec-1 GreetingController – entering showAddGreetingPage()
+2016-10-11 10:01:24.0064 INFO http-bio-8080-exec-4 GreetingController – entering addGreetingAndShowAll()
+2016-10-11 10:01:26.0428 WARN http-bio-8080-exec-4 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – SQL Error: 0, SQLState: 08S01
+2016-10-11 10:01:26.0428 ERROR http-bio-8080-exec-4 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 10:06:24.0973 WARN http-bio-8080-exec-5 org.springframework.web.servlet.PageNotFound – No mapping found for HTTP request with URI [/SpringGreetings/home/user] in DispatcherServlet with name 'greeter'
+2016-10-11 10:06:46.0414 INFO http-bio-8080-exec-7 GreetingController – entering showAddGreetingPage()
+2016-10-11 10:06:58.0197 WARN http-bio-8080-exec-8 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – SQL Error: 0, SQLState: 08S01
+2016-10-11 10:06:58.0198 ERROR http-bio-8080-exec-8 org.hibernate.engine.jdbc.spi.SqlExceptionHelper – Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-10-11 10:09:50.0858 INFO http-bio-8080-exec-9 GreetingController – entering addGreetingAndShowAll()
+2016-10-11 10:09:54.0556 INFO http-bio-8080-exec-10 GreetingController – entering addGreetingAndShowAll()
+2016-10-11 10:10:04.0070 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Closing WebApplicationContext for namespace 'greeter-servlet': startup date [Tue Oct 11 10:00:59 ICT 2016]; parent: Root WebApplicationContext
+2016-10-11 10:10:04.0086 INFO localhost-startStop-2 org.springframework.web.context.support.XmlWebApplicationContext – Closing Root WebApplicationContext: startup date [Tue Oct 11 10:00:53 ICT 2016]; root of context hierarchy
+2016-10-11 10:10:10.0697 INFO localhost-startStop-1 org.springframework.web.context.ContextLoader – Root WebApplicationContext: initialization started
+2016-10-11 10:10:10.0878 INFO localhost-startStop-1 org.springframework.web.context.support.XmlWebApplicationContext – Refreshing Root WebApplicationContext: startup date [Tue Oct 11 10:10:10 ICT 2016]; root of context hierarchy
+2016-10-11 10:10:10.0972 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2016-10-11 10:10:11.0505 INFO localhost-startStop-1 org.springframework.beans.factory.xml.XmlBeanDefinitionReader – Loading XML bean definitions from ServletContext resource [/WEB-INF/datasource-context.xml]

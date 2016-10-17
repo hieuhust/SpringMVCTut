@@ -1,0 +1,11 @@
+com\bitbybit\service\GreetingService.class
+com\bitbybit\web\form\GreetingForm.class
+com\bitbybit\domain\Color.class
+com\bitbybit\domain\Greeting.class
+com\bitbybit\web\controller\GreetingController.class
+com\bitbybit\service\ResfulServiceImpl.class
+com\bitbybit\domain\User.class
+com\bitbybit\service\ResfulService.class
+com\bitbybit\dao\GreetingDao.class
+com\bitbybit\service\SecondRestfulServiceImpl.class
+com\bitbybit\web\controller\RestfulController.class
